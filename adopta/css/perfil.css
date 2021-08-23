@@ -1,0 +1,292 @@
+
+/* -------------------------------------------------------------- 
+
+    3. General structure (panels) - Estructura general (paneles)
+
+------------------------------------------------------------- */
+.panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    min-height: 30vh;
+    opacity: 1;
+    overflow: hidden;
+    margin:  65px auto;
+    max-width: 100%;
+    margin-bottom: 0;
+
+  }
+
+  .panel i{
+      color: #1a1a1abb;
+      font-size: 2rem;
+  }
+  
+  .panel p {
+    font-size: 1rem;
+    margin:  0 auto;
+    max-width: 1200px;
+    width: 90%;
+    text-align: justify;
+  }
+  
+  .panel p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .panel a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+  }
+  
+  /* Background colors */
+  /* Colores de fondo */
+  .panel-0 {
+     /* background-color: lavender;*/
+   /* background:  url("../img/adopta/slider01.jpeg") no-repeat center center;
+    object-fit: cover;*/
+    color: #111;
+  }
+  
+  .panel-1 {
+    background: #ebcd39;
+    color: #1a1a1a;
+  }
+  
+  .panel-2 {
+    background: #e68568;
+    color: #fff;
+  }
+  
+  .panel-3 {
+    background: #2d8803;
+    color: #fff;
+  }
+  
+  /* -------------------------------------------------------------- 
+  
+      4. Project container - Contenedor del proyecto
+  
+  ------------------------------------------------------------- */
+  .project {
+        padding: 0vh 0vw;
+  }
+  
+  .project-heading {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    opacity: 0.8;
+    padding: 0 0 25px 0;
+  }
+  
+  .project-heading span {
+    float: right;
+    -webkit-transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  /* -------------------------------------------------------------- 
+  
+      5. Excerpt - Extracto
+  
+  ------------------------------------------------------------- */
+  .excerpt {
+    overflow: hidden;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* -------------------------------------------------------------- 
+  
+      6. Images - Imágenes
+  
+  ------------------------------------------------------------- */
+  .project-image {
+    border-radius: 8px;
+    float: left;
+    height: auto;
+    line-height: 0;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    overflow: hidden;
+    position: relative;
+    width: 20%;
+  }
+  
+  .project-image img {
+      width: 100%;
+      /*border-radius: 50%;*/
+  }
+  
+  /* Black and white image that dissapears on scrolling */
+  /* Imagen en blanco y negro que desaparece con el desplazamiento vertical */
+  .bw-image {
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: height 0.8s ease-out 0.6s;
+    transition: height 0.8s ease-out 0.6s;
+    width: 100%;
+  }
+  
+  .panel-0 .bw-image {
+    background-image: url(../img/adopta/01.jpeg);
+  }
+  
+  
+  /* -------------------------------------------------------------- 
+  
+      7. Interactive content - Contenido interactivo
+  
+  -------------------------------------------------------------- */
+  
+  
+
+  
+  /* -------------------------------------------------------------- 
+  
+      8. Media queries
+  
+  ------------------------------------------------------------- */
+  @media (max-width: 640px) {
+    .panel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: auto;
+        min-height: 40vh;
+        opacity: 1;
+        overflow: hidden;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    
+      }
+    .project-heading {
+      font-size: 36px;
+    }
+    .project {
+      padding: 8vh 0 0;
+    }
+    .project-image {
+      float: none;
+      /* margen de imagen y texto*/
+      margin: 0 auto 3rem;
+      width: 90%;
+    }
+    .panel p {
+      font-size: 1rem;
+      color: #111
+    }
+  }
+  
+  /* -------------------------------------------------------------- 
+  
+      9. EmprendeBlog Logo - Logo de EmprendeBlog
+  
+  -------------------------------------------------------------- */
+  .eb-logo {
+    bottom: 3vh;
+    position: fixed;
+    right: 3vw;
+    z-index: 2;
+  }
+  
+  .eb-logo img {
+    width: 65px;
+  }
+
+
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+
+/**** GALERIA ****/
+.section-c .gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.section-c .gallery a:first-child {
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  grid-row: 1/3;
+  grid-column: 1/4;
+}
+
+.section-c .gallery a:nth-child(2) {
+  grid-column-start: 6;
+  grid-column-end: 4;
+}
+
+.section-c .gallery img,
+.section-c .gallery a {
+  width: 99%;
+  height: 99%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .section-c .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+.section-c .gallery a:first-child {
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  grid-row: 1/3;
+  grid-column: 1/4;
+}
+
+.section-c .gallery a:nth-child(2) {
+  grid-column-start: 6;
+  grid-column-end: 4;
+}
+
+.section-c .gallery img,
+.section-c .gallery a {
+  width: 98%;
+  height: 98.5%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+}
+/*** TERMINA GALERIA ****/

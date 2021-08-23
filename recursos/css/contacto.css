@@ -1,0 +1,254 @@
+
+/* Helper Classes */
+.absolute-center {
+    position: absolute;
+    top: 55%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: table;
+    width: 100%;
+  }
+  
+  .absolute-center h1{
+      font-size: 2rem;
+      font-family: 'Pacifico', cursive;
+  }
+  .absolute-center h4{
+      font-size: 1rem;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .mx0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .mxauto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .white {
+    color: white;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .dark-overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0088ff2f;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media only screen and (min-width: 768px) {
+    .section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  
+  .lg-wrap {
+    max-width: 1024px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media only screen and (min-width: 768px) {
+    .lg-wrap {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .lg-wrap {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  
+  /* Slider */
+  /*div*/
+  .slider-container {
+    position: relative;
+    background: center center/cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.95);
+    background-image: url("../img/adopta/slider01.jpeg");
+    width: 100%;
+    height: 60%;
+    /* Aqui cambiamos el alto del slider*/
+    min-height: 45vh;
+    max-height: 620px;
+    overflow: hidden;
+    /*border-radius: 0 0 250% 250%/0 0 100% 100%;*/
+  }
+  
+  /* Slides, General */
+  /*figure*/
+  .slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    /* Animation */
+    -webkit-animation: slideFadeAndKenBurns 34s linear infinite;
+            animation: slideFadeAndKenBurns 34s linear infinite;
+    /* Background Image */
+    background: transparent center center/cover no-repeat;
+  }
+  
+  /* Slides, Individual */
+  /*figure*/
+  .slide-1 {
+    opacity: 1;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    background-image:linear-gradient(to bottom, #04c4ff81 , #830c9662),  url("../img/contacto/slider01.jpeg");
+  }
+  
+  /*figure*/
+  .slide-2 {
+    -webkit-animation-delay: 8.5s;
+            animation-delay: 8.5s;
+            background-image: linear-gradient(to bottom, #04c4ff81 , #830c9662), url("../img/contacto/slider02.jpeg");
+  }
+  
+  /*figure*/
+  .slide-3 {
+    -webkit-animation-delay: 17s;
+            animation-delay: 17s;
+            background-image: linear-gradient(to bottom, #04c4ff81 , #830c9662), url("../img/adopta/slider03.jpeg");
+  }
+  
+  /*figure*/
+  .slide-4 {
+    -webkit-animation-delay: 25.5s;
+            animation-delay: 25.5s;
+            background-image: linear-gradient(to bottom, #04c4ff81 , #830c9662), url("../img/adopta/slider04.jpeg");
+  }
+  
+  /* Slider Fading & Scaling (Ken Burns Effect) Animation Keyframes */
+  @-webkit-keyframes slideFadeAndKenBurns {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      background-position: center center;
+    }
+  }
+  @keyframes slideFadeAndKenBurns {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      background-position: center center;
+    }
+  }
+  
+  
+
+ /* Bootstrap Cards */
+ #Social-cards p {
+   color: #000;
+   font-size: 1rem;
+ }
+
+ #Social-cards i{
+   color: lightcoral;
+   font-size: 3rem;
+ }
+  h2{
+   color: lightcoral;
+   font-style: normal;
+
+ }
+ .text-center {
+   color: lightcoral;
+   font-size: 1.5rem;
+ }
+#Social-cards .twitter:hover{
+  background-color:#00acee ;    
+  color:white;
+  border:none !important;
+  transition:3s 0.2s ease;
+  }
+  #Social-cards .insta:hover{
+  background-color:#8a3ab9;    
+  color:white;
+  border:none !important;   
+  transition: 3s .2s linear;
+  }
+  #Social-cards .insta:hover .btn{
+  border-radius:0 !important;
+  background-color:white !important;
+  color:#8a3ab9;    
+  }
+  #Social-cards .twitter:hover .btn{
+  border-radius:0 !important;
+  background-color:white !important;
+  color:#00acee;    
+  }
+  #Social-cards .tube:hover{
+  background-color:#FF0000;    
+  color:white;
+  border:none !important;   
+  transition: 3s .2s ease-in-out;    
+  }
+  #Social-cards .tube:hover .btn{
+  border-radius:0 !important;
+  background-color:white !important;
+  color:#FF0000;    
+  }
